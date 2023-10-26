@@ -1,6 +1,6 @@
 # kedit-fold-lines
 
-This extension allows you to fold lines in a text file based on a string pattern, without modifying the file. It is similar to the KEDIT commands ALL, MORE, LESS, and MOREN, which are used to filter lines in a text editor.
+This [VS Code](https://code.visualstudio.com/) extension allows you to fold lines in a text file based on a string pattern, without modifying the file. It is similar to the [KEDIT](https://www.kedit.com/) commands ALL, MORE, LESS, and MOREN, which are used to filter lines in a text editor.
 
 This is especiall useful for filtering large [GAMS output files](https://www.gams.com/latest/docs/UG_GAMSOutput.html).
 
@@ -26,7 +26,7 @@ This extension contributes the following settings:
 
 ## Known Issues
 
-VSCode folding ranges are merged with folding suggestions by other extensions and providers. **This means that when you fold lines using this extension, you may see additional folding ranges that are not related to the string you entered.**  
+VS Code folding ranges are merged with folding suggestions by other extensions and providers. **This means that when you fold lines using this extension, you may see additional folding ranges that are not related to the string you entered.**  
 
 This extension does not support folding based on regular expressions or case sensitivity.
 
