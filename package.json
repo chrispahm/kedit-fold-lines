@@ -1,7 +1,7 @@
 {
-  "name": "fold-lines",
+  "name": "kedit-fold-lines",
   "displayName": "fold-lines",
-  "description": "Filter lines (grep), without modifying",
+  "description": "Fold lines (grep), without modifying. Similar to KEDIT ALL, MORE, LESS",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.77.0"
@@ -14,37 +14,45 @@
   "contributes": {
     "commands": [
       {
-        "command": "fold.filter",
-        "title": "Filter lines by regex"
+        "command": "kedit.all",
+        "title": "ALL: Show all lines including string"
       },
       {
-        "command": "fold.more",
-        "title": "Show more lines by regex"
+        "command": "kedit.more",
+        "title": "MORE: Show more lines including string"
       },
       {
-        "command": "fold.less",
-        "title": "Show less lines by regex"
+        "command": "kedit.moren",
+        "title": "MOREN: Show more lines including string, with n additional lines on top and m additional lines at the bottom"
       },
       {
-        "command": "fold.clear",
-        "title": "Clear all folds"
+        "command": "kedit.less",
+        "title": "LESS: Show less lines including string"
+      },
+      {
+        "command": "kedit.clear",
+        "title": "CLEAR: Clear all folds"
       }
-    ]
+    ],
+    "folding": {
+      "language": "plaintext"
+    }
   },
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "test": "node ./test/runTest.js"
+    "build": "vsce package"
   },
   "devDependencies": {
-    "@types/vscode": "^1.77.0",
     "@types/glob": "^8.1.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "16.x",
+    "@types/vscode": "^1.77.0",
+    "@vscode/test-electron": "^2.3.0",
+    "@vscode/vsce": "^2.21.1",
     "eslint": "^8.36.0",
     "glob": "^8.1.0",
     "mocha": "^10.2.0",
-    "typescript": "^4.9.5",
-    "@vscode/test-electron": "^2.3.0"
+    "typescript": "^4.9.5"
   }
 }
